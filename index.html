@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Number guessing game</title>
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <style>
       html {
         font-family: sans-serif;
@@ -27,9 +27,9 @@
 
       <p>Yours truly <a href="https://twitter.com/Muriithi_Kabogo"> Duncan </a> has selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. I'll tell you if your guess was too high or too low.</p>
 
-<div class="form">
-  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
-  <input type="submit" value="Submit guess" class="guessSubmit">
+<div class="form-inline">
+  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField form-control ml-2">
+  <input type="submit" value="Submit guess" class="guessSubmit btn btn-info ml-2">
 </div>
 
 <div class="resultParas">
