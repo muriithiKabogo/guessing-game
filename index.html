@@ -36,17 +36,26 @@
   rakam.init("792j7g5aica62fbppkhkdjb5d7asfnke3vc6hfnhc8kk8eh0ri75ge7irg4o501l", { 
         apiEndpoint:"rakam-trial-webapp-1979847320.us-east-1.aws.getrakam.com", 
         includeUtm: true, 
-        trackClicks: true, 
-        trackForms: true, 
-        includeReferrer: true 
-   });
+    trackClicks: true, 
+    trackForms: true, 
+    includeReferrer: true 
+}, function() {
+    var e = document.documentElement, g = document.getElementsByTagName('body')[0],
+            x = window.innerWidth || e.clientWidth || g.clientWidth,
+            y = window.innerHeight|| e.clientHeight|| g.clientHeight; 
+
+    rakam.logEvent("pageview", {url: window.location.pathname, time_on_page: rakam.getTimeOnPreviousPage(), returning_session: rakam.isReturningUser(), color_depth: window.screen.colorDepth, viewport: x + ' × ' + y, title: document.title});
+});
+rakam.startTimer(true);
+
+rakam.setSuperProperties({platform: 'Web', _ip: true, _user_agent:true, _referrer:document.referrer, resolution: window.screen.width+" × "+window.screen.height}, true);
 </script>
     <!--rakam api end-->
 
   </head>
 
   <body>
-      <h1>Guessing game(change2)</h1>
+      <h1>Guessing game(change3)</h1>
   
       <p>Yours truly <a href="https://twitter.com/Muriithi_Kabogo"> Duncan </a> has selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. I'll tell you if your guess was too high or too low.</p>
 
