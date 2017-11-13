@@ -36,32 +36,23 @@
   rakam.init("792j7g5aica62fbppkhkdjb5d7asfnke3vc6hfnhc8kk8eh0ri75ge7irg4o501l", { 
         apiEndpoint:"rakam-trial-webapp-1979847320.us-east-1.aws.getrakam.com", 
         includeUtm: true, 
-    trackClicks: true, 
-    trackForms: true, 
-    includeReferrer: true 
-}, function() {
-    var e = document.documentElement, g = document.getElementsByTagName('body')[0],
-            x = window.innerWidth || e.clientWidth || g.clientWidth,
-            y = window.innerHeight|| e.clientHeight|| g.clientHeight; 
-
-    rakam.logEvent("pageview", {url: window.location.pathname, time_on_page: rakam.getTimeOnPreviousPage(), returning_session: rakam.isReturningUser(), color_depth: window.screen.colorDepth, viewport: x + ' × ' + y, title: document.title});
-});
-rakam.startTimer(true);
-
-rakam.setSuperProperties({platform: 'Web', _ip: true, _user_agent:true, _referrer:document.referrer, resolution: window.screen.width+" × "+window.screen.height}, true);
+        trackClicks: true, 
+        trackForms: true, 
+        includeReferrer: true 
+   });
 </script>
     <!--rakam api end-->
 
   </head>
 
   <body>
-      <h1>Guessing game(change3)</h1>
+      <h1>Guessing game(change2)</h1>
   
       <p>Yours truly <a href="https://twitter.com/Muriithi_Kabogo"> Duncan </a> has selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. I'll tell you if your guess was too high or too low.</p>
 
 <div class="form-inline">
   <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField form-control ml-2">
-  <input type="submit" value="Submit guess" class="guessSubmit btn btn-info ml-2" rakam-event-attribute="query_term">
+  <input type="submit" value="Submit guess" class="guessSubmit btn btn-info ml-2">
 </div>
 
 <div class="resultParas">
@@ -147,7 +138,6 @@ rakam.setSuperProperties({platform: 'Web', _ip: true, _user_agent:true, _referre
 </body>
 
 <script>
-    rakam.init("shop");
-    rakam.logInlinedEvent("submit");
+    rakam.logEvent("submit");
 </script> 
 </html>
